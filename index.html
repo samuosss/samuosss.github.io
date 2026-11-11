@@ -77,7 +77,8 @@ nav.pill svg{width:16px;height:16px}
 @media (max-width:640px){nav.pill a.l.opt{display:none}nav.pill .ic a.opt{display:none}}
 
 /* hero */
-.hero{position:relative;isolation:isolate;padding-block:72px 56px}
+.hero{position:relative;isolation:isolate;padding-block:72px 56px;overflow-x:clip}
+html{overflow-x:clip}
 #net{position:absolute;inset:-80px 0 0;width:100%;height:calc(100% + 80px);z-index:-1;pointer-events:none;mask-image:radial-gradient(ellipse at 70% 40%,#000 25%,transparent 70%)}
 .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
 .hero .label{color:#b9b2ff}
@@ -186,7 +187,37 @@ section{padding-block:88px 8px}
 .grad-band dd{margin:0}
 .grad-band .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/3;max-width:100%}
 .grad-band .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.grad-pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grad-pics > div{overflow:hidden;border-radius:16px;border:1px solid var(--line);max-width:100%}
+.grad-pics img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.grad-pics > div:hover img{transform:scale(1.05)}
+.grad-pics .main{grid-column:span 2;aspect-ratio:4/3}
+.grad-pics .main img{object-position:center 35%}
+.grad-pics .sm{aspect-ratio:1}
 @media (max-width:860px){.grad-band{grid-template-columns:1fr;padding:22px}}
+
+/* vivid cards for "beyond engineering": each one in its own colours */
+.vivid{--c2:#9b6bff;border-color:color-mix(in srgb,var(--c) 40%,transparent);
+  background:radial-gradient(600px 300px at 100% 0%,color-mix(in srgb,var(--c) 22%,transparent),transparent 70%),
+             radial-gradient(500px 300px at 0% 100%,color-mix(in srgb,var(--c2) 18%,transparent),transparent 70%),#0f0f18}
+.vivid::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--c),var(--c2));z-index:2}
+.vivid .co{font-size:21px;color:var(--c)}
+.vivid .co::before{display:none}
+.vivid .pill-tag{align-self:flex-start;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent)}
+.vivid li::before{width:8px;height:8px;top:.6em;border-radius:2px;transform:rotate(45deg)}
+.vivid figure{border-color:color-mix(in srgb,var(--c) 40%,transparent)!important}
+.c-bx.vivid{--c2:#ff5f6d}
+.c-maj.vivid{--c:#b46bff;--c2:#38e1ff}
+.c-flag.vivid{--c:#ff4d6d;--c2:#3b5bff}
+.c-odec.vivid{--c:#ff3ea5;--c2:#38e1ff}
+.c-piz.vivid{--c2:#ffd23f}
+.flag-pics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.flag-pics figure{margin:0;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--line);max-width:100%}
+.flag-pics figure.wide{grid-column:span 2;aspect-ratio:auto}
+.flag-pics img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.flag-pics figure.wide img{height:auto}
+.flag-pics figure:hover img{transform:scale(1.05)}
+.flag-pics figcaption{font-size:12px;color:var(--muted);padding:8px 12px;background:var(--bg-2)}
 
 /* projects */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -445,7 +476,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <dt>Before</dt><dd>Scientific Baccalaureate, Lycée Pilote de Nabeul</dd>
         </dl>
       </div>
-      <div class="ph"><img src="img/graduation.jpg" alt="Sami on the ESPRIT steps on graduation day with his project report" loading="lazy"></div>
+      <div class="grad-pics">
+        <div class="main"><img src="img/graduation.jpg" alt="Sami on the ESPRIT steps on graduation day with his project report" loading="lazy"></div>
+        <div class="sm"><img src="img/esprit-pfe.webp" alt="ESPRIT 2025–2026 graduation project report cover" loading="lazy"></div>
+        <div class="sm"><img src="img/graduation-group.jpg" alt="Sami with fellow graduates at ESPRIT, holding his report" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -505,8 +540,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <p>Outside the code, I sell exhibition space and run events. It's how I learned to talk to clients.</p>
     </div>
     <div class="timeline">
-      <article class="job c-bx">
-        <div class="who"><span class="co">Bridgexpo · BGroup</span><span class="when">2026</span></div>
+      <article class="job vivid c-bx">
+        <div class="who"><span class="co">Bridgexpo · BGroup</span><span class="when">2026</span><span class="pill-tag">Sales &amp; events</span></div>
         <div>
           <h3>Sales &amp; event planning for international trade exhibitions</h3>
           <ul>
@@ -523,8 +558,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         </div>
       </article>
 
-      <article class="job c-maj">
-        <div class="who"><span class="co">Majestic</span><span class="when">2023</span></div>
+      <article class="job vivid c-maj">
+        <div class="who"><span class="co">Majestic</span><span class="when">2023 · Tunis</span><span class="pill-tag">Founder</span></div>
         <div>
           <h3>Founder: my first venture</h3>
           <ul>
@@ -539,21 +574,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         </div>
       </article>
 
-      <article class="job sm c-flag">
-        <div class="who"><span class="co">Flag Football League</span><span class="when">ESPRIT</span></div>
+      <article class="job vivid c-flag">
+        <div class="who"><span class="co">Flag Football League</span><span class="when">Nov 2024 · ESPRIT</span><span class="pill-tag">Project Coordinator</span></div>
         <div class="row">
           <div>
-            <h3>Project Coordinator</h3>
+            <h3>Launching an American flag football league at ESPRIT</h3>
             <ul>
-              <li>Launched a student flag football league: grand opening, sponsoring, recruitment and a women's team.</li>
+              <li>Ran the launch plan with a team split into sponsoring, communication, events and venues.</li>
+              <li>Led the <b>events</b> track: the grand opening on 4 December, coaching sessions and player recruitment.</li>
+              <li>Got the league officially hosted by ESPRIT, with training on the ESPRIT Business field and a women's team.</li>
             </ul>
           </div>
-          <div class="mini one"><figure><img src="img/flag-training.jpg" alt="Football in hand on the ESPRIT field during training" loading="lazy"></figure></div>
+          <div class="flag-pics">
+            <figure><img src="img/flag-hosted.jpg" alt="Announcement: Flag is officially hosted at ESPRIT, with a football in hand during a presentation" loading="lazy"></figure>
+            <figure><img src="img/flag-training.jpg" alt="Football in hand on the ESPRIT field during training" loading="lazy" style="object-position:center 70%"></figure>
+            <figure class="wide"><img src="img/flag-trello.jpg" alt="The league's Trello launch board: action plan, sponsoring, communication, events and venues" loading="lazy"><figcaption>The launch plan on Trello</figcaption></figure>
+          </div>
         </div>
       </article>
 
-      <article class="job sm c-odec">
-        <div class="who"><span class="co">ODEC × TUNESF</span><span class="when">Dec 2025 · Sousse</span></div>
+      <article class="job sm vivid c-odec">
+        <div class="who"><span class="co">ODEC × TUNESF</span><span class="when">Dec 2025 · Sousse</span><span class="pill-tag">Esports</span></div>
         <div class="row">
           <div>
             <h3>Olympic Digital Esports Camp</h3>
@@ -565,7 +606,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         </div>
       </article>
 
-      <article class="job sm c-piz">
+      <article class="job sm vivid c-piz">
         <div class="who"><span class="co">Pizzos · Enactus</span><span class="when">2022 → 2024</span></div>
         <div>
           <h3>Social media marketing · Training &amp; development</h3>
