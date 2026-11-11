@@ -178,7 +178,17 @@ section{padding-block:96px 24px}
 .strip.s5{grid-template-columns:repeat(5,1fr)}
 .beyond-row{display:grid;grid-template-columns:1fr;gap:16px}
 .beyond-row > *{min-width:0}
-.chill{margin:0;position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:440px}
+.chill-row{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:stretch}
+.chill-row > *{min-width:0}
+.recharge{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:18px;justify-content:center;
+  background:radial-gradient(500px 260px at 0% 0%,rgba(56,225,255,.16),transparent 70%),radial-gradient(500px 260px at 100% 100%,rgba(139,92,246,.2),transparent 70%),rgba(12,14,38,.92)}
+.recharge h3{font-size:clamp(22px,2.8vw,30px);font-weight:600}
+.recharge blockquote{margin:0;font-size:17px;color:#d6d8ff;border-left:3px solid var(--cyan);padding-left:14px}
+.recharge ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.recharge li{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:rgba(7,8,26,.55);border:1px solid var(--line);font-size:14px;font-weight:600}
+.recharge li small{font-family:var(--f-mono);font-size:10.5px;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;font-weight:400}
+@media (max-width:900px){.chill-row{grid-template-columns:1fr}}
+.chill{margin:0;position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:320px}
 .chill img{object-position:center 60%}
 .chill img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s ease-out}
 .chill:hover img{transform:scale(1.05)}
@@ -898,10 +908,25 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div class="chips"><span>Adventures</span><span>Basketball</span><span>Photography</span><span>Music</span><span>AI</span><span>Entrepreneurship</span></div>
       </div>
     </div>
-    <figure class="chill">
-      <img src="img/chill-balcony.jpg" alt="Feet up on a balcony overlooking a pool, palm trees and the sea" loading="lazy">
-      <figcaption><small>Recharge mode</small>Sea, sky and a slow afternoon</figcaption>
-    </figure>
+    <div class="chill-row">
+      <div class="recharge">
+        <p class="eyebrow">How I recharge</p>
+        <h3>Busy weeks, <span class="grad">slow afternoons</span></h3>
+        <blockquote>I give everything to the work, then I log off by the sea.</blockquote>
+        <ul>
+          <li><small>Roots</small>Nabeul</li>
+          <li><small>Base</small>Tunis</li>
+          <li><small>Court</small>Basketball</li>
+          <li><small>Lens</small>Photography</li>
+          <li><small>Sound</small>Music</li>
+          <li><small>Map</small>Mediterranean coast</li>
+        </ul>
+      </div>
+      <figure class="chill">
+        <img src="img/chill-balcony.jpg" alt="Feet up on a balcony overlooking a pool, palm trees and the sea" loading="lazy">
+        <figcaption><small>Recharge mode</small>Sea, sky and a slow afternoon</figcaption>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
