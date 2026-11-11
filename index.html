@@ -169,6 +169,13 @@ section{padding-block:96px 24px}
 .p-majestic{--c1:#c9a2ff;--c2:#e5c06a}
 .p-pizzos{--c1:#ff7a45;--c2:#ffc94d}
 .p-enactus{--c1:#ffd23f;--c2:#8b5cf6}
+.p-odec{--c1:#ff3ea5;--c2:#38e1ff}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.strip figure{aspect-ratio:3/4;max-width:100%;position:relative}
+.strip figure img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.strip figure:hover img{transform:scale(1.07)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(7,8,26,.9));padding:22px 10px 8px}
+@media (max-width:760px){.strip{grid-template-columns:1fr 1fr}}
 .exp.compact{padding-block:24px}
 .exp.compact .org{font-size:19px}
 
@@ -393,7 +400,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <span class="role"><b style="background:var(--blue)"></b>ERP Consultant · Dynamics 365</span>
         <span class="role"><b style="background:#f5a31a"></b>Sales &amp; Event Planner</span>
       </div>
-      <p class="lede rv d3">I build the systems that move money: <strong>credit scoring, debt collection, risk models and ERP finance modules</strong>. Then I sell them. I work where engineering, finance and the client meeting overlap, from a PostgreSQL schema to a booth on an exhibition floor.</p>
+      <p class="lede rv d3">I build the systems that move money: <strong>credit scoring, debt collection, risk models and ERP finance modules</strong>. Then I sell them. I work where engineering, finance and the client meeting overlap, from the first line of code to the handshake on the exhibition floor.</p>
       <div class="cta rv d4">
         <a class="btn primary" href="#contact">Work with me →</a>
         <a class="btn" href="https://www.linkedin.com/in/sami-boumaiza-87b65a221/" target="_blank" rel="noopener">LinkedIn</a>
@@ -443,8 +450,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Experience</p>
-      <h2>Each role in its own colours</h2>
-      <p>From banking AI to ERP consulting, exhibition sales and sports coordination. Most recent first.</p>
+      <h2>Code by day, <span class="grad">deals and events</span> by night</h2>
+      <p>From banking AI to ERP consulting, exhibition sales, esports and sports coordination. Most recent first.</p>
     </div>
 
     <div class="ledger">
@@ -476,12 +483,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
         <div class="body">
           <h3>Sales &amp; Event Planner for international trade exhibitions</h3>
+          <div class="split">
           <ul class="pts">
             <li>Sell exhibition stands and follow exhibitors from prospect to signed contract to collected payment.</li>
             <li>Plan and prepare the shows: stand allocation on the floor plan, preparation checklists, schedules and follow-up.</li>
             <li>Focus on the <b>textile sector</b>, starting with <b>ITF Intertex Tunisia</b> and its machinery and home-textile sister shows.</li>
             <li>Built the team's own sales tool, <b>BGroup Sales</b>: dashboard (signed revenue, conversion, cash-in), Kanban pipeline, clickable stand plans, payment recovery with WhatsApp/SMS/email reminders, FR/EN, roles, deployed on Azure.</li>
           </ul>
+          <figure>
+            <img src="img/itf-previous.jpg" alt="Sami with his ITF Intertex badge at the show's social media wall" loading="lazy">
+            <figcaption>ITF Intertex, previous edition</figcaption>
+          </figure>
+          </div>
           <div class="shows" aria-label="Exhibitions in the portfolio">
             <span class="hl">ITF Intertex Tunisia</span><span>Intertex Machinery Tunisia</span><span>Interhome Tunisia</span><span>ITF Intertex Spain</span><span>ITF Intertex Portugal</span><span>ITF Intertex Macao</span><span>Texinist · Turkey</span><span>Deniminist · Turkey</span><span>Intex Bangladesh</span><span>Intex Sri Lanka</span><span>Febratex · Brazil</span><span>Interpackprint</span><span>Interleather &amp; Shoes</span>
           </div>
@@ -518,6 +531,29 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             </figure>
           </div>
           <div class="chips"><span>FastAPI</span><span>React</span><span>React Native</span><span>PostgreSQL</span><span>Redis</span><span>XGBoost</span><span>SHAP</span><span>DarijaBERT</span><span>JWT · RBAC</span><span>Docker</span></div>
+        </div>
+      </article>
+
+      <article class="exp p-odec">
+        <div class="side">
+          <span class="org">ODEC × TUNESF</span>
+          <span class="when">2025 · Esports</span>
+          <span class="tag">Gaming event</span>
+        </div>
+        <div class="body">
+          <h3>Olympic Digital Esports Camp with the Tunisian E-Sport Federation</h3>
+          <ul class="pts">
+            <li>Took part in ODEC, the national esports event run with <b>TUNESF</b>, the Tunisian E-Sport Federation.</li>
+            <li>An <b>Esports Super League</b> across Rocket League, Street Fighter 6, League of Legends, Mobile Legends, Counter-Strike 2 and EA FC 25.</li>
+            <li>Big-screen matches, cosplay shows and a sponsor wall including Topnet, BNA Bank and ESPRIT.</li>
+          </ul>
+          <div class="strip">
+            <figure><img src="img/odec-stage.jpg" alt="Mobile Legends match on the big screen at the TUNESF esports stage" loading="lazy"><figcaption>Main stage</figcaption></figure>
+            <figure><img src="img/odec-staff.jpg" alt="ODEC staff team in front of the Super League screens" loading="lazy"><figcaption>ODEC team</figcaption></figure>
+            <figure><img src="img/odec-cosplay-stage.jpg" alt="Cosplayer on stage in front of a neon LED wall" loading="lazy"><figcaption>Cosplay show</figcaption></figure>
+            <figure><img src="img/odec-crowd.jpg" alt="Sami from behind in a racing jacket walking through the event crowd" loading="lazy"><figcaption>In the crowd</figcaption></figure>
+          </div>
+          <div class="chips"><span>Esports</span><span>Event operations</span><span>Community</span><span>Sponsoring</span></div>
         </div>
       </article>
 
@@ -830,8 +866,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="txt">
         <p class="eyebrow">Off the clock</p>
         <h2>Outside work</h2>
-        <p style="color:#d6d8ff">Basketball, flag football, photography and music. I like building companies as much as building software.</p>
-        <div class="chips"><span>Basketball</span><span>Flag football</span><span>Photography</span><span>Music</span><span>AI</span><span>Entrepreneurship</span></div>
+        <p style="color:#d6d8ff">Basketball, photography, music and adventures: cliffs, coastlines and new places. I like building companies as much as building software.</p>
+        <div class="chips"><span>Adventures</span><span>Basketball</span><span>Photography</span><span>Music</span><span>AI</span><span>Entrepreneurship</span></div>
       </div>
     </div>
   </div>
