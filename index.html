@@ -166,7 +166,7 @@ section{padding-block:96px 24px}
 .p-tv{--c1:#e5c06a;--c2:#7a5cff}
 .p-erp{--c1:#7ea6ff;--c2:#38e1ff}
 .p-flag{--c1:#ff4d6d;--c2:#3b5bff}
-.p-majestic{--c1:#c9a2ff;--c2:#e5c06a}
+.p-majestic{--c1:#b46bff;--c2:#38e1ff}
 .p-pizzos{--c1:#ff7a45;--c2:#ffc94d}
 .p-enactus{--c1:#ffd23f;--c2:#8b5cf6}
 .p-odec{--c1:#ff3ea5;--c2:#38e1ff}
@@ -175,7 +175,8 @@ section{padding-block:96px 24px}
 .strip figure img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1)}
 .strip figure:hover img{transform:scale(1.07)}
 .strip figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(7,8,26,.9));padding:22px 10px 8px}
-@media (max-width:760px){.strip{grid-template-columns:1fr 1fr}}
+.strip.s5{grid-template-columns:repeat(5,1fr)}
+@media (max-width:760px){.strip,.strip.s5{grid-template-columns:1fr 1fr}.strip.s5 figure:first-child{grid-column:span 2;aspect-ratio:4/3}}
 .exp.compact{padding-block:24px}
 .exp.compact .org{font-size:19px}
 
@@ -537,17 +538,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <article class="exp p-odec">
         <div class="side">
           <span class="org">ODEC × TUNESF</span>
-          <span class="when">2025 · Esports</span>
+          <span class="when">27–29 Dec 2025 · Sousse</span>
           <span class="tag">Gaming event</span>
         </div>
         <div class="body">
           <h3>Olympic Digital Esports Camp with the Tunisian E-Sport Federation</h3>
           <ul class="pts">
-            <li>Took part in ODEC, the national esports event run with <b>TUNESF</b>, the Tunisian E-Sport Federation.</li>
-            <li>An <b>Esports Super League</b> across Rocket League, Street Fighter 6, League of Legends, Mobile Legends, Counter-Strike 2 and EA FC 25.</li>
-            <li>Big-screen matches, cosplay shows and a sponsor wall including Topnet, BNA Bank and ESPRIT.</li>
+            <li>Took part in ODEC, the national esports camp run with <b>TUNESF</b>, the Tunisian E-Sport Federation, at El Mouradi Palace, Sousse. Three days, free access.</li>
+            <li>The <b>Tunisian Esports Super League</b> across Rocket League, Street Fighter 6, League of Legends, Mobile Legends, Counter-Strike 2 and EA FC 25.</li>
+            <li>Big-screen matches and cosplay shows, backed by Topnet, Ooredoo, BNA Bank, SFBT, Gigatech, El Mouradi and ESPRIT.</li>
           </ul>
-          <div class="strip">
+          <div class="strip s5">
+            <figure><img src="img/odec-poster.jpg" alt="ODEC Olympic Digital Esports Camp poster: free access, December 27–29, El Mouradi Palace Sousse" loading="lazy"><figcaption>Official poster</figcaption></figure>
             <figure><img src="img/odec-stage.jpg" alt="Mobile Legends match on the big screen at the TUNESF esports stage" loading="lazy"><figcaption>Main stage</figcaption></figure>
             <figure><img src="img/odec-staff.jpg" alt="ODEC staff team in front of the Super League screens" loading="lazy"><figcaption>ODEC team</figcaption></figure>
             <figure><img src="img/odec-cosplay-stage.jpg" alt="Cosplayer on stage in front of a neon LED wall" loading="lazy"><figcaption>Cosplay show</figcaption></figure>
@@ -557,18 +559,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
       </article>
 
-      <article class="exp compact p-majestic">
+      <article class="exp p-majestic">
         <div class="side">
           <span class="org">Majestic</span>
           <span class="when">08/2023 → present · Tunis</span>
           <span class="tag live">Founder</span>
         </div>
         <div class="body">
-          <h3>Founder</h3>
+          <h3>Founder of Majestic: nights built around atmosphere</h3>
           <ul class="pts">
-            <li>Founded and run my own venture alongside my studies and jobs since 2023.</li>
+            <li>Founded Majestic in 2023 and have run it alongside my studies and jobs ever since.</li>
+            <li>Themed events where the setting is the show: <b>neon and UV art</b>, light installations in olive groves and under open-sky canopies, and <b>DJ sets</b>.</li>
+            <li>From concept to the last light: venue styling, lighting, line-ups, live painting and promotion.</li>
           </ul>
-          <div class="chips"><span>Entrepreneurship</span><span>Business development</span></div>
+          <div class="strip s5">
+            <figure><img src="img/majestic-neon.jpg" alt="The glowing Majestic neon sign under purple light" loading="lazy"><figcaption>The Majestic sign</figcaption></figure>
+            <figure><img src="img/majestic-dj.jpg" alt="DJ mixing on Pioneer decks under purple light" loading="lazy"><figcaption>DJ set</figcaption></figure>
+            <figure><img src="img/majestic-uv-art.jpg" alt="UV-reactive portrait painting glowing on an easel" loading="lazy"><figcaption>UV live art</figcaption></figure>
+            <figure><img src="img/majestic-tree-lights.jpg" alt="Olive trees wrapped in warm string lights at dusk" loading="lazy"><figcaption>Olive grove lights</figcaption></figure>
+            <figure><img src="img/majestic-canopy.jpg" alt="Lit canopy of netting and fairy lights against the evening sky" loading="lazy"><figcaption>Sky canopy</figcaption></figure>
+          </div>
+          <div class="chips"><span>Entrepreneurship</span><span>Event production</span><span>Lighting &amp; decor</span><span>Artist booking</span><span>Promotion</span></div>
         </div>
       </article>
 
