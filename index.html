@@ -176,6 +176,14 @@ section{padding-block:96px 24px}
 .strip figure:hover img{transform:scale(1.07)}
 .strip figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(7,8,26,.9));padding:22px 10px 8px}
 .strip.s5{grid-template-columns:repeat(5,1fr)}
+.beyond-row{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.beyond-row > *{min-width:0}
+.chill{margin:0;position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:300px}
+.chill img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s ease-out}
+.chill:hover img{transform:scale(1.05)}
+.chill figcaption{position:absolute;left:16px;right:16px;bottom:16px;padding:12px 14px;border-radius:14px;background:rgba(7,8,26,.78);backdrop-filter:blur(8px);border:1px solid var(--line);font-size:14px;font-weight:600}
+.chill figcaption small{display:block;font-family:var(--f-mono);font-size:10.5px;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;font-weight:400}
+@media (max-width:900px){.beyond-row{grid-template-columns:1fr}.chill{min-height:380px}}
 @media (max-width:760px){.strip,.strip.s5{grid-template-columns:1fr 1fr}.strip.s5 figure:first-child{grid-column:span 2;aspect-ratio:4/3}}
 .exp.compact{padding-block:24px}
 .exp.compact .org{font-size:19px}
@@ -610,7 +618,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             <figure><img src="img/majestic-neon.jpg" alt="The glowing Majestic neon sign under purple light" loading="lazy"><figcaption>The Majestic sign</figcaption></figure>
             <figure><img src="img/majestic-dj.jpg" alt="DJ mixing on Pioneer decks under purple light" loading="lazy"><figcaption>DJ set</figcaption></figure>
             <figure><img src="img/majestic-uv-art.jpg" alt="UV-reactive portrait painting glowing on an easel" loading="lazy"><figcaption>UV live art</figcaption></figure>
-            <figure><img src="img/majestic-tree-lights.jpg" alt="Olive trees wrapped in warm string lights at dusk" loading="lazy"><figcaption>Olive grove lights</figcaption></figure>
+            <figure><img src="img/majestic-sami.jpg" alt="Sami leaning against a wall in front of olive trees wrapped in string lights" loading="lazy"><figcaption>Setting up the olive grove</figcaption></figure>
             <figure><img src="img/majestic-canopy.jpg" alt="Lit canopy of netting and fairy lights against the evening sky" loading="lazy"><figcaption>Sky canopy</figcaption></figure>
           </div>
           <div class="chips"><span>Entrepreneurship</span><span>Event production</span><span>Lighting &amp; decor</span><span>Artist booking</span><span>Promotion</span></div>
@@ -656,6 +664,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
         <div class="body">
           <h3>Project Coordinator: launching an American flag football league</h3>
+          <div class="split">
           <ul class="pts">
             <li>Ran the launch plan with a team split into sponsoring, communication, events, venues and recruitment.</li>
             <li>Led the <b>events</b> track: the grand opening, coaching sessions with the GSP partners, and player recruitment.</li>
@@ -663,6 +672,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             <li>Built the sponsoring file and pitch list; oversaw the visual identity, poster, teaser, banner and Instagram content.</li>
             <li>Secured the ESPRIT Business field for training on Wednesdays and Fridays, and launched a <b>women's team</b>.</li>
           </ul>
+          <figure>
+            <img src="img/flag-training.jpg" alt="Holding a Wilson NCAA football on the ESPRIT field while players gather for training" loading="lazy" style="aspect-ratio:4/5;object-fit:cover;object-position:center 70%">
+            <figcaption>Training session, ESPRIT field</figcaption>
+          </figure>
+          </div>
           <div class="chips"><span>Project coordination</span><span>Event planning</span><span>Sponsoring</span><span>Communication</span><span>Recruitment</span><span>Trello</span></div>
         </div>
       </article>
@@ -873,6 +887,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <section id="beyond">
   <div class="wrap">
+    <div class="beyond-row">
     <div class="beyond">
       <img src="img/cliff.webp" alt="Sami standing on a cliff above the Mediterranean at sunset" loading="lazy">
       <div class="txt">
@@ -882,6 +897,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div class="chips"><span>Adventures</span><span>Basketball</span><span>Photography</span><span>Music</span><span>AI</span><span>Entrepreneurship</span></div>
       </div>
     </div>
+    <figure class="chill">
+      <img src="img/chill-balcony.jpg" alt="Feet up on a balcony overlooking a pool, palm trees and the sea" loading="lazy">
+      <figcaption><small>Recharge mode</small>Sea, sky and a slow afternoon</figcaption>
+    </figure>
+    </div>
   </div>
 </section>
 
@@ -889,7 +909,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <div class="contact">
       <div>
-        <div class="avatar"><img src="img/suit-brown.jpg" alt="Sami in a brown suit"></div>
+        <div class="avatar"><img src="img/pro-blazer.jpg" alt="Sami in a charcoal blazer"></div>
         <p class="eyebrow">Contact</p>
         <h2>Let's build or sell <span class="grad">something</span>.</h2>
         <p>Open to ERP and fintech projects, AI and data work, solution sales and event partnerships. Based in Tunis, working in Arabic, French and English.</p>
