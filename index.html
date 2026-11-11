@@ -219,7 +219,8 @@ section{padding-block:88px 8px}
 .beyond h2{font-size:clamp(26px,3.8vw,40px);font-weight:300}
 .beyond h2 b{font-weight:700}
 .beyond p{color:#d8d8e6}
-.chill-row{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-top:14px}
+.chill-row{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:14px;margin-top:14px}
+@media (max-width:1080px) and (min-width:861px){.chill-row{grid-template-columns:1fr 1fr}.chill-row .recharge{grid-column:span 2}}
 .chill-row > *{min-width:0}
 .recharge{border-radius:26px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:16px;justify-content:center;background:var(--card)}
 .recharge h3{font-size:clamp(22px,2.6vw,28px);font-weight:300}
@@ -560,7 +561,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
               <li>Took part in the national esports camp run with the Tunisian E-Sport Federation.</li>
             </ul>
           </div>
-          <div class="mini two"><figure><img src="img/odec-poster.jpg" alt="ODEC event poster" loading="lazy"></figure><figure><img src="img/odec-crowd.jpg" alt="Sami in the ODEC crowd" loading="lazy"></figure></div>
+          <div class="mini two"><figure><img src="img/odec-poster.jpg" alt="ODEC event poster" loading="lazy"></figure><figure><img src="img/odec-staff.jpg" alt="The ODEC team in front of the Super League screens" loading="lazy" style="object-position:center 30%"></figure></div>
         </div>
       </article>
 
@@ -601,6 +602,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <li><small>Map</small>The coast</li>
         </ul>
       </div>
+      <figure class="chill">
+        <img src="img/odec-crowd.jpg" alt="Sami from behind in a vintage racing jacket under blue neon lights" loading="lazy" style="object-position:center 70%">
+        <figcaption><small>Night mode</small>Racing jacket, neon lights</figcaption>
+      </figure>
       <figure class="chill">
         <img src="img/chill-balcony.jpg" alt="Feet up on a balcony overlooking a pool, palm trees and the sea" loading="lazy">
         <figcaption><small>Recharge mode</small>Sea, sky and a slow afternoon</figcaption>
