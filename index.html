@@ -236,6 +236,10 @@ section{padding-block:88px 8px}
 .flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .flow li{padding:10px 12px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line);font-size:13px;color:#d2d2e0}
 .flow li small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--pc)}
+.feat-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.feat-foot .tags{flex:1 1 320px}
+.btn.req{padding:10px 18px;font-size:13.5px}
+.proj.feat .req-note{flex:0;font-size:12px;color:var(--dim)}
 @media (max-width:760px){.feat-body,.flow{grid-template-columns:1fr}}
 @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){.grid{grid-template-columns:1fr}}
@@ -500,7 +504,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     </div>
     <div class="grid">
       <div class="proj feat" style="--pc:#e8336d">
-        <div class="top"><b>Capital markets · JavaScript</b><span>new · private repo</span></div>
+        <div class="top"><b>Capital markets · JavaScript</b><span>new · access on request</span></div>
         <div class="feat-body">
           <div>
             <h3>Meridian Trading Lab</h3>
@@ -513,7 +517,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li><small>Technology</small>10-step EOD batch · SQL datamart · ops console</li>
           </ul>
         </div>
-        <div class="tags"><span>8 products</span><span>Black-Scholes</span><span>Expected shortfall</span><span>SA-CCR</span><span>SQLite</span><span>0 runtime deps</span></div>
+        <div class="feat-foot">
+          <div class="tags"><span>8 products</span><span>Black-Scholes</span><span>Expected shortfall</span><span>SA-CCR</span><span>SQLite</span><span>0 runtime deps</span></div>
+          <a class="btn solid req" href="https://github.com/samuosss/samuosss.github.io/issues/new?template=access-request.yml" target="_blank" rel="noopener">Request access ↗</a>
+        </div>
+        <p class="req-note">Private repo. Requests go through GitHub, and I send an invite once approved.</p>
       </div>
       <a class="proj" style="--pc:#2fd28a" href="https://github.com/samuosss/recouvrement-amiable" target="_blank" rel="noopener">
         <div class="top"><b>Banking · Python</b><span>↗</span></div>

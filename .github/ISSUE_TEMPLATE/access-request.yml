@@ -1,0 +1,35 @@
+name: Request access to a private project
+description: Ask Sami for read access to a private repository, such as Meridian Trading Lab.
+title: "Access request: Meridian Trading Lab"
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest. Sami reviews each request and, if approved, sends a GitHub invitation to the account that opened this issue.
+
+        **This issue is public.** Don't include an email address, phone number or anything private. Sami can reach you through your GitHub profile.
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      options:
+        - Meridian Trading Lab
+        - Another private project
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Who you are
+      description: Your role and company, or "student", "recruiter", etc.
+      placeholder: e.g. Risk technology recruiter at a bank
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why you'd like access
+      description: A sentence or two is enough.
+    validations:
+      required: false
