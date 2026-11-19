@@ -232,7 +232,10 @@ section{padding-block:88px 8px}
 .proj.feat{grid-column:1 / -1;padding:26px;background:radial-gradient(600px 260px at 100% 0%,color-mix(in srgb,var(--pc) 16%,transparent),transparent 70%),var(--card);border-color:color-mix(in srgb,var(--pc) 35%,transparent)}
 .feat-body{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
 .feat-body > *{min-width:0}
-.proj.feat h3{font-size:24px;font-weight:700;margin-bottom:8px}
+.proj.feat h3{font-size:24px;font-weight:700;margin:0}
+.proj.feat .brand{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.proj.feat .brand img{width:52px;height:52px;border-radius:12px;box-shadow:0 0 0 1px rgba(61,99,216,.5),0 8px 28px rgba(31,58,147,.55)}
+.proj.feat .tagline{font-family:var(--f-mono);font-size:12px;color:var(--pc)}
 .flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .flow li{padding:10px 12px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line);font-size:13px;color:#d2d2e0}
 .flow li small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--pc)}
@@ -503,11 +506,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <h2>Selected <b>projects</b></h2>
     </div>
     <div class="grid">
-      <div class="proj feat" style="--pc:#e8336d">
+      <div class="proj feat" style="--pc:#F2A93B">
         <div class="top"><b>Capital markets · JavaScript</b><span>new · access on request</span></div>
         <div class="feat-body">
           <div>
-            <h3>Meridian Trading Lab</h3>
+            <div class="brand"><img src="img/valarc-mark.svg" alt="Valarc logo" width="52" height="52"><div><h3>Valarc</h3><span class="tagline">One trade. One truth.</span></div></div>
             <p>A front-to-back trading and risk platform in the browser. A trade is captured once, revalued on every market tick, drives market risk, counterparty exposure and CVA, moves through validation, confirmation and settlement, and lands in a nightly reporting datamart.</p>
           </div>
           <ul class="flow" aria-label="Platform modules">

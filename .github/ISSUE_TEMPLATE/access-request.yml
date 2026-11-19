@@ -1,6 +1,6 @@
 name: Request access to a private project
-description: Ask Sami for read access to a private repository, such as Meridian Trading Lab.
-title: "Access request: Meridian Trading Lab"
+description: Ask Sami for read access to a private repository, such as Valarc.
+title: "Access request: Valarc"
 labels: ["access-request"]
 body:
   - type: markdown
@@ -14,7 +14,7 @@ body:
     attributes:
       label: Project
       options:
-        - Meridian Trading Lab
+        - Valarc
         - Another private project
     validations:
       required: true
