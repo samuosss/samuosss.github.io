@@ -229,6 +229,14 @@ section{padding-block:88px 8px}
 .proj p{font-size:14px;color:#b9b9c8;flex:1}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-family:var(--f-mono);font-size:11px;padding:3px 8px;border-radius:7px;background:var(--bg-2);border:1px solid var(--line);color:#cfcfe0}
+.proj.feat{grid-column:1 / -1;padding:26px;background:radial-gradient(600px 260px at 100% 0%,color-mix(in srgb,var(--pc) 16%,transparent),transparent 70%),var(--card);border-color:color-mix(in srgb,var(--pc) 35%,transparent)}
+.feat-body{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.feat-body > *{min-width:0}
+.proj.feat h3{font-size:24px;font-weight:700;margin-bottom:8px}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.flow li{padding:10px 12px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line);font-size:13px;color:#d2d2e0}
+.flow li small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--pc)}
+@media (max-width:760px){.feat-body,.flow{grid-template-columns:1fr}}
 @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){.grid{grid-template-columns:1fr}}
 
@@ -337,7 +345,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <a class="btn" href="#contact">Get in touch</a>
       </div>
       <div class="stats rv d3">
-        <div class="stat"><b data-count>25</b><span>projects on GitHub</span></div>
+        <div class="stat"><b data-count>26</b><span>projects on GitHub</span></div>
         <div class="stat"><b data-count>3</b><span>finance companies</span></div>
         <div class="stat"><b data-count>5</b><span>languages spoken</span></div>
         <div class="stat"><b>2021</b><span>coding since</span></div>
@@ -491,6 +499,22 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <h2>Selected <b>projects</b></h2>
     </div>
     <div class="grid">
+      <div class="proj feat" style="--pc:#e8336d">
+        <div class="top"><b>Capital markets · JavaScript</b><span>new · private repo</span></div>
+        <div class="feat-body">
+          <div>
+            <h3>Meridian Trading Lab</h3>
+            <p>A front-to-back trading and risk platform in the browser. A trade is captured once, revalued on every market tick, drives market risk, counterparty exposure and CVA, moves through validation, confirmation and settlement, and lands in a nightly reporting datamart.</p>
+          </div>
+          <ul class="flow" aria-label="Platform modules">
+            <li><small>Front office</small>Trade capture · pricing lab · curve bootstrapping</li>
+            <li><small>Middle office</small>Full-revaluation VaR · stress tests · CVA</li>
+            <li><small>Back office</small>Trade lifecycle · confirmations · settlement</li>
+            <li><small>Technology</small>10-step EOD batch · SQL datamart · ops console</li>
+          </ul>
+        </div>
+        <div class="tags"><span>8 products</span><span>Black-Scholes</span><span>Expected shortfall</span><span>SA-CCR</span><span>SQLite</span><span>0 runtime deps</span></div>
+      </div>
       <a class="proj" style="--pc:#2fd28a" href="https://github.com/samuosss/recouvrement-amiable" target="_blank" rel="noopener">
         <div class="top"><b>Banking · Python</b><span>↗</span></div>
         <h3>Smart Recovery Platform</h3>
